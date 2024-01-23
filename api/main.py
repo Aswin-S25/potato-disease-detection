@@ -20,8 +20,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-model_path = os.path.abspath('../potatoes.h5')
-MODEL = keras.models.load_model(model_path)
+MODEL = tf.keras.models.load_model('api/potatoes.h5')
 
 
 CLASS_NAMES = ['Early Blight', 'Late Blight', 'Healthy']
